@@ -23,5 +23,14 @@ jobs:
       run: dotnet build --no-restore
 
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal -- NUnit.TestOutputXml=test-result 
+
+    - name: Publish Test Results of Unit Test
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      if: always()
+      with:
+        check_name: "Unit Test Results"
+        nunit_files: "**/Debug/**/test-result/*.xml"
+
+    
 

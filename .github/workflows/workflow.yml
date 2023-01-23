@@ -18,8 +18,8 @@ jobs:
     name: ci
     uses: ./.github/workflows/CI.yml
 
-  pipeline:
-    name: pipeline
+  automation_workflow:
+    name: automation_workflow
     needs: ci
     if: ${{ success() }}
     uses: preetham-coupa/RestSharpWithNUnit/.github/workflows/workflow_automation.yml@main
