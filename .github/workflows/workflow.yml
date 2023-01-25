@@ -25,4 +25,4 @@ jobs:
     uses: preetham-coupa/RestSharpWithNUnit/.github/workflows/workflow_automation.yml@main
     with:
       url_of_instance: "https://api.publicapis.org/entries" 
-      pr_id: "1" 
+      pr_id: "1"  
