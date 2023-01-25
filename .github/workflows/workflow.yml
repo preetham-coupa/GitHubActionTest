@@ -18,11 +18,11 @@ jobs:
     name: ci
     uses: ./.github/workflows/CI.yml
 
-  # pipeline:
-  #   name: pipeline
-  #   needs: ci
-  #   if: ${{ success() }}
-  #   uses: preetham-coupa/RestSharpWithNUnit/.github/workflows/workflow.yml@main
-  #   with:
-  #     url_of_instance: "aaa"
-  #     pr_id: "01234"
+  automation_workflow:
+    name: automation_workflow
+    needs: ci
+    if: ${{ success() }}
+    uses: preetham-coupa/RestSharpWithNUnit/.github/workflows/workflow_automation.yml@main
+    with:
+      url_of_instance: "https://api.publicapis.org/entries" 
+      pr_id: "1"

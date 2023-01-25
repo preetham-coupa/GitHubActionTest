@@ -50,3 +50,9 @@ _book
 /node_modules
 .vscode
 **/.idea/
+
+NUnitTestProjectForGitHubActionTest/bin/**
+GitHubActionTest/bin/**
+
+NUnitTestProjectForGitHubActionTest/obj/**
+GitHubActionTest/obj/**
